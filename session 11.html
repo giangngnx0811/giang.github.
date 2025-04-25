@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sum of Two Numbers</title>
+</head>
+<body>
+
+<script>
+    function getSum() 
+        let a = prompt("Enter number A");
+        if (isNaN(a) || a === "" || a === null) {
+            alert("Number A is formatted incorrect");
+            return;
+        }
+        let b = prompt("Enter number B");
+        if (isNaN(b) || b === "" || b === null) {
+            alert("Number B is formatted incorrect");
+            return;
+        }
+        let numA = parseFloat(a);
+        let numB = parseFloat(b);
+        let result = numA + numB;
+
+        alert(`Result:\n${numA} + ${numB} = ${result}`);
+    }
+    getSum();
+</script>
+
+</body>
+</html>
