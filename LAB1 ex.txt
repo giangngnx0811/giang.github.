@@ -12,7 +12,7 @@
         <img src="images/orange.png" alt="Orange">
         <img src="images/kiwi.png" alt="Kiwi">
         <img src="images/kiwi.png" alt="Kiwi">
-        <img src="images/apple.png" alt="C:\Users\Giang\Downloads\apple.png">
+        <img src="images/apple.png" alt="Apple">
     </p>
     <p>
         <img src="images/apple.png" alt="Apple">
