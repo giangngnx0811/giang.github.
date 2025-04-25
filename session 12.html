@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Geometry Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+        h2 {
+            color: #333;
+        }
+        .box {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            max-width: 400px;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 10px 0;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .result {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Rectangle Calculator</h2>
+    <div class="box">
+        <label>Length:</label>
+        <input type="number" id="length" placeholder="Enter length">
+        <label>Width:</label>
+        <input type="number" id="width" placeholder="Enter width">
+        <button onclick="calculateRectangle()">Calculate</button>
+        <div class="result" id="rectangleResult"></div>
+    </div>
+
+    <h2>Circle Calculator (π = 3.14)</h2>
+    <div class="box">
+        <label>Radius:</label>
+        <input type="number" id="radius" placeholder="Enter radius">
+        <button onclick="calculateCircle()">Calculate</button>
+        <div class="result" id="circleResult"></div>
+    </div>
+
+    <script>
+        function calculateRectangle() {
+            let length = parseFloat(document.getElementById("length").value);
+            let width = parseFloat(document.getElementById("width").value);
+
+            if (isNaN(length) || isNaN(width)) {
+                alert("Please enter valid numbers for length and width.");
+                return;
+            }
+
+            let perimeter = 2 * (length + width);
+            let area = length * width;
+
+            document.getElementById("rectangleResult").innerHTML =
+                "Perimeter: " + perimeter + "<br>Area: " + area;
+        }
+
+        function calculateCircle() {
+            let radius = parseFloat(document.getElementById("radius").value);
+            const PI = 3.14;
+
+            if (isNaN(radius)) {
+                alert("Please enter a valid number for radius.");
+                return;
+            }
+
+            let perimeter = 2 * PI * radius;
+            let area = PI * radius * radius;
+
+            document.getElementById("circleResult").innerHTML =
+                "Perimeter (Circumference): " + perimeter.toFixed(2) + "<br>Area: " + area.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>
